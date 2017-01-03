@@ -1,0 +1,705 @@
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_HEAD1">
+<title>Welcome Page</title>
+
+
+<link href="css/login/GridViewHelper.css" rel="STYLESHEET"
+	type="text/css" />
+<link href="../../AppStyle.css" rel="STYLESHEET" type="text/css" />
+<link href="Bootstrap/css/bootstrap.css" rel="stylesheet"
+	type="text/css" />
+
+<script src="js/login//bootstrap.js" type="text/javascript"></script>
+
+<link href="css/login//font-awesome.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="Scripts/style.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+<style type="text/css">
+.myClass {
+	display: none !important;
+}
+
+.c-menu__close {
+	color: #fff !important;
+	background-color: #3184a1 !important;
+	border: none !important;
+	cursor: default !important;
+	border-radius: 10px;
+	border: 1px solid #BADA55;
+	font-size: 14px;
+	text-align: center;
+}
+
+/*.gridview tbody tr th.RemoveHeader
+     {
+    display:none !important;
+    border-left:1px !important;
+    border-right:1px !important;
+    background-color:#3184a1;
+    }*/
+#ctl00_gvLeaveMaster {
+	background-color: #f3f3f3 !important;
+}
+
+#ctl00_gvLeaveMaster tr {
+	overflow: scroll;
+}
+
+#ctl00_gvLeaveMaster th {
+	background-color: #3184a1 !important;
+	color: White;
+	border: none;
+}
+
+#ctl00_gvLeaveMaster td {
+	padding: 5px 5px 5px 5px;
+	text-align: center;
+	border: none;
+	color: #0f8fb9;
+	background-color: #f3f3f3;
+}
+
+.prevNextPost span.prevArticle {
+	background: url(images/prev-next-position.png) no-repeat -27px -68px;
+	right: 300px;
+}
+
+.prevNextPost span {
+	height: 68px;
+	position: fixed;
+	text-indent: -99999px;
+	top: 50%;
+	width: 26px;
+	z-index: 10000;
+	cursor: pointer;
+}
+
+.prevNextPost .nextArticle {
+	background: url(images/prev-next-position.png) no-repeat 0 -68px;
+	right: 0;
+}
+
+.prevNextPost span {
+	height: 68px;
+	position: fixed;
+	text-indent: -99999px;
+	top: 50%;
+	width: 26px;
+	z-index: 10000;
+}
+
+.c-menu--slide-right {
+	position: fixed;
+	top: 8.2em;
+	height: 500px;
+}
+
+.PlaceHolderContainer {
+	width: 100%;
+	border-color: #1A7ED6;
+	background-color: White;
+}
+
+.PromptCSS {
+	color: Snow;
+	font-size: large;
+	font-style: italic;
+	font-weight: bold;
+	background-color: DeepPink;
+	font-family: Courier New;
+	border: solid 1px Pink;
+	height: 28px;
+}
+
+.tickimage {
+	background-image: url('images/tick.PNG');
+}
+
+.vacantimage {
+	background-image: url('i' mages/ vacant.PNG ');
+}
+
+.blockimage {
+	background-image: url('images/cross.PNG');
+}
+
+.ModalPop {
+	background-color: #666699;
+	filter: alpha(opacity = 20);
+}
+
+.hide {
+	position: absolute;
+	visibility: hidden;
+}
+
+.show {
+	position: absolute;
+	visibility: visible;
+}
+
+.ModalPopupBG {
+	background-color: #666699;
+	filter: alpha(opacity = 50);
+	opacity: 0.7;
+}
+
+.ModalPopupDeactivate {
+	background-color: #ffffff;
+	border: 1px solid black;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+}
+
+.divpop {
+	min-width: 200px;
+	min-height: 150px;
+	background: white;
+}
+
+.reorderStyle li {
+	list-style-type: none;
+}
+
+.callbackStyle {
+	list-style-type: none;
+	border: thin #CFE4FE inset;
+}
+
+.itemArea {
+	list-style-type: none;
+	font: Verdana;
+	font-size: 12px;
+	text-align: left;
+	align: Top;
+	cursor: hand;
+	cursor: pointer;
+}
+
+.reorderCue {
+	list-style-type: red;
+	border: solid thin #E2EFFF;
+	width: 80%;
+	height: 24px;
+}
+
+.DragHandleClass {
+	width: 5px;
+	height: 5px;
+	background-color: red;
+	cursor: move;
+}
+
+.PopupHeader {
+	min-width: 250px;
+	min-height: 30px;
+	background: #6794CB;
+}
+
+.modalBackground {
+	height: 100%;
+	background-color: #EBEBEB;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
+}
+
+.graydiv {
+	position: absolute;
+	background-color: #5B5B5B;
+	left: 0px;
+	top: 0px;
+	z-index: 10000;
+	display: none;
+}
+
+.ModalBackground {
+	background-color: black;
+	filter: alpha(opacity = 70);
+	opacity: 0.7;
+}
+</style>
+<style type="text/css">
+body {
+	font-family: Arial;
+	font-size: 10pt;
+}
+
+.hover_row {
+	background-color: #ecf2bf;
+}
+</style>
+<link href="css/login/DataList.css" rel="stylesheet" type="text/css" />
+<link href="css/login/ModalPopUp.css" rel="stylesheet" type="text/css" />
+
+
+
+<style type="text/css">
+.modalBackground {
+	background-color: Gray;
+	filter: alpha(opacity = 50);
+	opacity: .5;
+	vertical-align: middle;
+	text-align: center;
+}
+</style>
+
+
+
+<style type="text/css">
+.html,body,form {
+	height: 100% !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+.toolbar {
+	font-weight: bold;
+	font-size: 14px;
+	font-family: Tahoma;
+	color: White !important;
+	padding: 3px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,
+		startColorStr=#6395c8, endColorStr=#2d70b7 );
+}
+
+.toolbarHOver {
+	font-weight: bold;
+	font-size: 13px;
+	font-family: Tahoma;
+	color: White !important;
+	padding: 3px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=1,
+		startColorStr=#6395c8, endColorStr=#2d70b7 );
+}
+
+.Heading {
+	font-weight: bold;
+	font-size: 12px;
+	font-family: Tahoma;
+	color: black !important;
+}
+
+.Pic {
+	height: 80px;
+	width: 100%;
+	background: repeat-no;
+}
+/* Apply this CSS class go to Menu Control Properties->StaticMenuItemStyle->CssClass. Here type this class Name */
+.StaticMenuStyle {
+	font-family: Arial;
+	font-size: 12px;
+	color: White;
+	position: relative;
+	width: 120px;
+	height: 30px;
+}
+/* Apply this CSS class go to Menu Control Properties->StaticHoverStyle->CssClass. Here type this class Name */
+.StaticHoverStyle {
+	background: url(images/hoverimage1.gif) no-repeat;
+	width: 120px;
+	height: 30px;
+}
+/* Apply this CSS class go to Menu Control Properties->DynamicMenuItemStyle->CssClass. Here type this class Name */
+.DynamicMenuStyle {
+	display: block;
+	width: 160px;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-decoration: none;
+	padding: 2px 8px;
+	background-color: #3A5C60;
+	border-bottom: 1px solid #d6f0fd;
+	text-align: left;
+	height: 25px;
+}
+/* This is to set image width which is in Dynamic Menu Items. */
+.DynamicMenuStyle img {
+	padding-right: 8px;
+}
+/* Apply this CSS class go to Menu Control Properties->DynamicHoverStyle->CssClass. Here type this class Name */
+.DynamicHoverStyle {
+	width: 160px;
+	height: 25px;
+	color: #000000;
+	border: 1px solid #3A5C60;
+	background-color: #d6f0fd;
+}
+</style>
+
+<script type="text/javascript" src="js/login/AjaxProgressBar.js"></script>
+
+<script src="js/login/udm-custom.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/login/udm-control.js"></script>
+
+<script type="text/javascript" src="js/login/udm-style.js"></script>
+
+<script type="text/javascript" src="js/login/udm-dom.js"></script>
+
+<script type="text/javascript" src="js/login/udm-mod-keyboard.js"></script>
+
+<link rel="stylesheet" type="text/css"
+	href="css/login/jquery-ui-1.9.2.custom.min.css" />
+<link href="css/login/GridViewHelper.css" rel="STYLESHEET"
+	type="text/css" />
+<link href="css/login/AppStyle.css" rel="STYLESHEET" type="text/css" />
+<link href="css/login//DataList.css" type="text/css" rel="stylesheet" />
+<link href="css/login//Envision.css" type="text/css" rel="stylesheet" />
+<link href="css/login//ModalPopUp.css" type="text/css" rel="stylesheet" />
+</head>
+<body bottommargin="0" leftmargin="0" rightmargin="0" topmargin="0"
+	scroll="auto">
+
+
+
+
+	<form name="aspnetForm" method="post" action="WelcomePage.aspx"
+		id="aspnetForm" autocomplete="OFF">
+
+
+
+		<div id="ctl00_UpdatePanel1">
+
+
+			<div style="height: 100%;">
+
+
+				<div id="prog" style="display: none;">test loading</div>
+
+
+
+				<table id="MainTable" cellspacing="0" cellpadding="0" border="0"
+					style="width: 100%; background-color: #C9ECF7;">
+					<tr id="tr_topTemplate"
+						style="background-color: #C9ECF7; width: 100%">
+						<td colspan="3" style="width: 100%;">
+							<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+							<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Template 2</title>
+<link href="css/login//style1.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.style1 {
+	height: 55px;
+}
+
+.style2 {
+	width: 60px;
+	height: 59px;
+}
+</style>
+</head>
+<body>
+
+
+	<table id="Table_01" width="100%" border="0" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td valign="top"
+				style="width: 222px; background-image: url(image/top_strip.png); background-repeat: repeat-x;">
+				<img src="image/logo_pidilite.png" alt="" />
+			</td>
+
+
+			<td valign="top"
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 10%;";>&nbsp;</td>
+			<td valign="top"
+				style="background-image: url(image/bg_image.png); background-repeat: repeat-x; width: 30%;";>&nbsp;</td>
+			<td valign="top"
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 10%;";>&nbsp;</td>
+			<td
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 30px;">
+				<div id="div_1" style="height: 62px;"
+					onmouseover="showHoverMenu(this)" onmouseout="hideHoverMenu(this)">
+					<a href="WelcomePage.aspx"> <img src="image/Activity.png"
+						alt="Activity" border="0" />
+					</a>
+				</div>
+			</td>
+			<td
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 30px;">
+				<div id="div_2" style="height: 62px;"
+					onmouseover="showHoverMenu(this)" onmouseout="hideHoverMenu(this)">
+					<a href="AdminWelcome.aspx"> <img src="image/master.png"
+						alt="Masters" border="0" />
+					</a>
+				</div>
+			</td>
+			<td
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 30px;">
+				<div id="div_3" style="height: 62px;"
+					onmouseover="showHoverMenu(this)" onmouseout="hideHoverMenu(this)">
+					<a href="Reports.aspx"> <img src="image/report.png"
+						alt="Reports" border="0" />
+					</a>
+				</div>
+			</td>
+			<td
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 30px;">
+				<div id="ctl00_TopTemplate2_div_6" style="height: 62px;"
+					onmouseover="showHoverMenu(this)" onmouseout="hideHoverMenu(this)"
+					onclick="javascript:showModal(0)">
+
+					<img src="image/about.png" alt="About" border="0" />
+				</div>
+			</td>
+			<td
+				style="background-image: url(image/top_strip.png); background-repeat: repeat-x; width: 30px;">
+				<div id="div_5" style="height: 62px;"
+					onmouseover="showHoverMenu(this)" onmouseout="hideHoverMenu(this)">
+
+					<a href="../../Login.aspx"> <img src="image/logout.png"
+						alt="Logout" border="0" /></a>
+				</div>
+			</td>
+
+		</tr>
+	</table>
+	<div id="div_About" style="display: none; width: 502px; height: 258px;">
+		<table
+			style="left: 0px; width: 100%; position: relative; top: 0px; height: 100%">
+			<tr>
+				<td
+					style="border-color: Gray; border-width: thin; border-style: groove; width: 100%; height: 100%; font-family: Trebuchet MS; font-size: 9pt;"
+					bordercolor="maroon">
+					<div id="ctl00_TopTemplate2_headerPnl"
+						style="background-color: #5BB2FF; font-family: Verdana; font-size: 8pt; height: 20px;">
+
+						<span id="ctl00_TopTemplate2_lbl_abt"
+							style="color: White; font-family: Verdana; font-size: 8pt; font-weight: bold;">About
+							IvyDistributor™</span>
+
+					</div>
+					<div id="ctl00_TopTemplate2_Panel1"
+						style="background-color: #F4F4F4; border-color: #006600; border-width: 1px; border-style: Solid; font-family: Verdana; font-size: 8pt; height: 256px; width: 500px;">
+
+						<br />
+						<table width="100%">
+							<tr>
+								<td width="3%">&nbsp;</td>
+								<td width="94%">
+									<table>
+										<tr>
+											<td align="left" width="54%" valign="middle"><img
+												id="ctl00_TopTemplate2_img_abtSR"
+												src="../../LoginImages/logo_dis.png"
+												style="width: 45%; border-width: 0px;" /> Version No.
+												&nbsp; <span id="ctl00_TopTemplate2_lblAbout"
+												style="color: #006600; font-family: Verdana; font-size: 8pt; font-weight: bold; position: static">1.2</span>
+											</td>
+											<td align="right" width="40%"><img
+												id="ctl00_TopTemplate2_img_abtEnv"
+												src="image/ivy%20logo%20sml.png"
+												style="width: 45%; border-width: 0px;" /></td>
+										</tr>
+										<tr>
+											<td colspan="2" align="center"><br /> <br />
+												<div align="justify" style="width: 95%; padding: 4 4 4 4;">
+													<b>Warning:</b> This software application is protected by
+													copyright law and international treaties. Unauthorized
+													reproduction or distribution of this program, or any
+													portion of it, may result in severe civil and criminal
+													penalties, and will be prosecuted to the maximum extent
+													possible under the law.
+												</div></td>
+										</tr>
+										<tr>
+											<td colspan="2"><br /> <br /> Copyright © 2013 <font
+												style="font-weight: bold; font-family: Trebuchet MS; font-size: 10pt;"
+												color="#000099">Ivy Mobility Solutions Ltd.</font> All
+												rights reserved.<br /></td>
+										</tr>
+									</table>
+								</td>
+								<td width="3%">&nbsp;</td>
+							</tr>
+						</table>
+
+					</div>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" name="ctl00$TopTemplate2$btn_close" value=" X "
+			id="ctl00_TopTemplate2_btn_close" title="Close"
+			style="color: White; background-color: #5BB2FF; border-color: White; border-style: None; font-weight: bold; top: -283px; left: 487px; position: relative; width: 20px; height: 18px;" />
+	</div>
+
+	<!-- End ImageReady Slices -->
+
+</body>
+							</html>
+
+
+
+
+
+						</td>
+					</tr>
+					<tr>
+						<td valign="bottom" colspan="4" width="100%">
+							<table id="ContaintTable" cellspacing="0" cellpadding="0"
+								border="0" width="100%">
+								<tr id="trContentMain">
+									<td colspan="2">
+										<table width="100%" border="0">
+											<tr
+												style="background-image: url(image/bottom_strip.png); background-repeat: repeat-x;">
+												<td align="left" style="height: 21px; width: 10%;">
+													<table width="100%" border="0">
+														<tr>
+															<td style="width: 35%"><font class="Heading">
+																	Admin </font><font color="#000000">- </font><font
+																class="Heading"> </font><font color="#000000">- </font><font
+																class="Heading"> ADMIN </td>
+															<td align="center" style="width: 65%; height: 18px;">
+																<table border="0" width="100%">
+																	<tr>
+																		<td style="width: 45%" align="right"><font
+																			class="Heading" color="#000000"> </font></td>
+																		<td style="width: 55%"></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td align="center" style="height: 18px; width: 65%;"
+										bgcolor="#074F8F"></td>
+									<td align="right" bgcolor="#a8cce2"
+										style="width: 35%; height: 18px"></td>
+								</tr>
+								<tr id="trContent">
+									<td id="ctl00_TD2" valign="top" align="left"
+										style="width: 15%; border-color: #557a9a; height: 100%; background-color: #a8cce2; padding-right: 2px; padding-top: 10px">
+										<div id="ctl00_dvCtrl">
+											<ul class="udm" id="udm">
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="AccessManagement.aspx">Access Management</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="ManualSaleshierarchy.aspx">ManualSaleshierarchy</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="UserCreation.aspx">DFAC-UserCreation</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="UserManagement.aspx">User Management</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="NewsFlashSetting.aspx">News Flash</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="OutletMapping.aspx">Customer Mapping Management</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="SalesHierarchyImport.aspx">SalesHierarchy Upload</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="OutletMobileLockConfig.aspx">Outlet Mobile Lock
+														Config</a></li>
+												<li class="MenuLink"><a style="text-decoration: none;"
+													href="PasswordChange.aspx">Set User Password</a></li>
+											</ul>
+										</div>
+									</td>
+
+									<td id="ctl00_tdContent" valign="top" align="left"
+										style="width: 90%; border-color: #1A7ED6; background-color: White; padding-left: 2px; padding-top: 10px;">
+										<div class="PlaceHolderContainer">
+
+
+											<div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+
+												<div id="ctl00_ContentPlaceHolder1_panel_div"
+													style="font-family: Verdana; font-size: 8pt; width: 250px;">
+
+
+													<div ID="div_show" class="divpop">
+														<div class="PopupHeader" id="PopupHeader">
+															<h4>
+																<span id="ctl00_ContentPlaceHolder1_lbl"
+																	style="color: White; font-family: Verdana; font-size: 8pt;">Please
+																	select the WSS login account</span>
+
+															</h4>
+														</div>
+														<table border="0" width="250px">
+															<tr style="height: 40px">
+																<td>
+																	<div></div>
+
+																</td>
+
+															</tr>
+															<tr>
+																<td align="center"><span
+																	id="ctl00_ContentPlaceHolder1_lbl_Wss"
+																	style="font-family: Verdana; font-size: 8pt; font-weight: bold;">WSS</span>
+																</td>
+																<td align="center"><select
+																	name="ctl00$ContentPlaceHolder1$ddl_Wss"
+																	id="ctl00_ContentPlaceHolder1_ddl_Wss"
+																	style="font-family: Verdana; font-size: 8pt; width: 180px;">
+
+																</select></td>
+															</tr>
+															<tr>
+																<td colspan="2" align="right"><input type="submit"
+																	name="ctl00$ContentPlaceHolder1$btn_next" value="Next"
+																	id="ctl00_ContentPlaceHolder1_btn_next"
+																	class="goAnchor" /></td>
+															</tr>
+														</table>
+
+													</div>
+
+
+												</div>
+												<input type="submit"
+													name="ctl00$ContentPlaceHolder1$btnShowDivPopup" value=""
+													id="ctl00_ContentPlaceHolder1_btnShowDivPopup"
+													class="goAnchor" style="display: none" />
+
+
+											</div>
+
+											<div id="ctl00_Panel1"
+												style="font-family: Verdana; font-size: 8pt; display: none;">
+
+												<img src="../Loading/loading.gif" alt="Loading..." />
+											</div>
+
+											<input type="hidden" name="ctl00$hiddenFieldPop"
+												id="ctl00_hiddenFieldPop" />
+										</div>
+									</td>
+
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+				<div id="divg" class="ModalBackground graydiv"></div>
+				<div id="divSignin"
+					style="border: '1px soild green'; display: none; z-index: 100002; width: 550px; position: absolute;">
+					<div
+						style="text-align: right; height: 100px; width: 100px; background-color: White; border: solid 1px lightyellow">
+					</div>
+
+
+
+				</div>
+				<input type="hidden" name="ctl00$levelid" id="ctl00_levelid"
+					value="1" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+	<div ng-app="myApp" ng-controller="customersCtrl">
+
+
+		
+		            <div>
+                Country: 
+                <select id="country" ng-model="country_id" ng-change="getCities()" ng-options="x.Name for x in myData">
+                    <option value=''>Select</option>
+                </select>
+                
+                            <div>
+                City: <select id="city" ng-model="city_id" ng-options="x.Country for x in myData1"><option value=''>Select</option></select>
+            </div>
+            </div>
+
+	</div>
+
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope, $http) {
+			
+			$scope.getCountries = function(){
+				$http.get("http://www.w3schools.com/angular/customers.php").then(function(response) {
+					$scope.myData = response.data.records;
+
+				});
+				
+			}
+			
+			
+			$scope.getCities = function(){
+				$http.get("http://www.w3schools.com/angular/customers.php").then(function(response) {
+					$scope.myData1 = response.data.records;
+
+				});
+				
+			}
+			
+			angular.element(document).ready(function(){
+					$scope.getCountries();
+			});
+			
+		});
+	</script>
+
+</body>
+</html>

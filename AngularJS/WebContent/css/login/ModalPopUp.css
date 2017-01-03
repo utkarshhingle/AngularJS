@@ -1,0 +1,328 @@
+.MaintblModalPopUp
+{
+    border-collapse:collapse;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:615px;    
+}
+.MaintblModalPopUp1
+{
+	border-collapse:collapse;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:615px;
+}
+.MainPnlNode
+{
+    border-collapse:collapse;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:540px;
+}
+.MainPanelbg 
+{	    
+ 	background-color:#9baff8;
+}
+.MainmodalPnlbg /*modalpanelbackground */
+{	
+    border-collapse:collapse ;
+    padding:0px;
+    margin:0px;
+    border-spacing:0px;
+    width:600px;
+    background:white;
+ 	vertical-align:middle;
+}
+.MainmodalPnlhead /*modalpanelheader */
+{
+    border-collapse:collapse ;
+    text-align:center;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:580px;
+    height:25px;
+}
+.MainmodalpanelheadImage /*modalpanelheaderImage*/
+{
+    text-align:right;
+    vertical-align:middle;
+    padding:0px;
+    padding-right:2px;
+    margin:0px;
+    border-spacing:0px;
+    width:20px;
+    height:25px;
+}
+.MainmodalPnlLeft /*modalpanelleft*/
+{
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    border-collapse:collapse ;
+    text-align:left;
+    background-image: url(../../Images/Panelleftcurvewhite.jpg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width:14px;
+}
+.MainmodalPnlcenter /*modalpanelcenter*/
+{
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    border-collapse:collapse ;
+    background-image: url(../../Images/Panel-sliceswhite.jpg);
+    background-repeat: repeat;
+    height: 16px;
+    width:574px;
+}
+.MainmodalPnlright /*modalpanelright*/
+{
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    border-collapse:collapse ;
+    text-align:right;
+    background-image: url(../../Images/Panel-rightcurvewhite.jpg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width:12px;
+    
+}
+.MainPanelbg650px 
+{	    
+ 	background-color:#9baff8;
+ 	width:750px;
+}
+.MainmodalPnlbg750px /*modalpanelbackground */
+{	
+    border-collapse:collapse ;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:750px;
+    background:white;
+ 	vertical-align:middle;
+}
+
+.MainmodalPnlhead750px /*modalpanelheader */
+{
+    border-collapse:collapse ;
+    text-align:center;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:580px;
+    height:25px;
+}
+
+.MaintblModalPopUp750px
+{
+    border-collapse:collapse ;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:750px;
+}
+.userpopupmain
+{
+	float:left;
+	width:615px;
+	text-align:center;
+	min-height:200px;
+	max-height:500px;
+	overflow-x:hidden;
+	overflow-y:auto;		
+	background-color:#ffffff;	
+}
+.userpopupmainstack
+{
+	float:left;
+	width:615px;
+	text-align:center;
+	min-height:50px;
+	max-height:500px;
+	overflow-x:hidden;
+	overflow-y:auto;		
+	background-color:#ffffff;
+}
+.userpopupmainstackBia
+{
+	float:left;
+	margin:-2px 0 0 0;
+	width:615px;
+	text-align:center;
+	min-height:50px;
+	max-height:500px;
+	overflow-x:hidden;
+	overflow-y:auto;		
+	background-color:#ffffff;
+}
+.MaintblPanelHeader
+{
+ background-image: url(../../Images/LeftPanelSlice.jpg); 
+ background-repeat: repeat-x;
+ width:600px; 
+ height:25px;
+}
+.MaintblPanelHeader1
+{	
+	background-image: url(../../Images/LeftPanelSlice.jpg); 
+	background-repeat: repeat-x;
+	width:615px; 
+	height:25px;
+}
+.Commonpopup815px
+{
+	float:left;
+	width:815px;
+	text-align:center;
+	min-height:300px;
+	max-height:450px;
+	overflow-x:hidden;
+	overflow-y:auto;		
+	background-color:#ffffff;
+}
+.InnerCommonpopup815px
+{
+	float:left;
+	width:1300px;	
+	margin:-2px 0 0 0;
+	text-align:center;
+	min-height:100px;
+	max-height:450px;
+	overflow-x:hidden;
+	overflow-y:auto;		
+	background-color:#ffffff;
+		
+}
+.Commonpopup800px
+{
+	float:left;
+	width:800px;
+	text-align:center;
+	min-height:300px;
+	max-height:450px;
+	overflow-x:hidden;
+	overflow-y:auto;		
+	background-color:#ffffff;
+}
+.MaintblModalPopUp815px
+{
+	border-collapse:collapse;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:1300px;
+}
+.MaintblModalPopUp800px
+{
+    border-collapse:collapse ;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:1300px;
+    background-color:#ffffff;
+}
+.MaintblModalPopUp800pxstack
+{
+	border-collapse:collapse ;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:800px;
+    background-color:#ffffff;
+}
+.modalpanelHead815px
+{
+	 width:1300px;
+	 background-color:#1a5391;	 
+	 background-repeat: repeat-x;
+	 height: 25px;
+	 text-align:left;	
+}
+.modalpanelHead800px
+{
+ width:800px;
+ background-image: url(../../Images/Panel-header.jpg); 
+ background-repeat: repeat-x;
+ height: 25px;
+ text-align:right;
+ vertical-align:middle; 
+}
+
+.modalpanelbackground800px
+{	
+    border-collapse:collapse ;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:1300px;
+    background:#ffffff; 	
+}
+
+.modalpanelheader780px
+{
+    border-collapse:collapse ;
+    text-align:center;
+    vertical-align:middle;
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    width:780px;
+    height:25px;
+}
+.modalpanelheaderImage20px
+{
+    text-align:right;
+    vertical-align:middle;
+    padding:0px;
+    padding-right:2px;
+    margin:0px; 
+    border-spacing:0px;
+    width:20px;
+    height:25px;
+}
+.modalpanelleft16px
+{
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    border-collapse:collapse ;
+    text-align:left;
+    background-image: url(../../Images/Panelleftcurvewhite.jpg);
+    background-repeat: no-repeat;
+    height: 16px;
+    width:14px;
+}
+.modalpanelcenter774px
+{
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    border-collapse:collapse ;
+    background-image: url(../../Images/Panel-sliceswhite.jpg);
+    background-repeat: repeat;
+    height: 16px;
+    width:774px;
+}
+.modalpanelright16px
+{
+    padding:0px;
+    margin:0px; 
+    border-spacing:0px;
+    border-collapse:collapse ;
+    text-align:right;
+    background-image: url(../../Images/Panel-rightcurvewhite.jpg);
+    background-repeat: no-repeat;
+     height: 16px;
+     width:12px;
+}

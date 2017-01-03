@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>Getting Started With ngGrid Example</title>
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.css"
+	data-semver="2.0.11" data-require="ng-grid@*" />
+
+	<style>
+		.gridStyle {
+			height: 400px;
+			width: 400px;
+			broder: 1px solid black;
+		}
+	</style>
+<script type="text/javascript" src="js/grid/jquery.min.js"></script>
+<script type="text/javascript" src="js/grid/angular.js"></script>	
+<script type="text/javascript" src="js/grid/ng-grid.min.js"></script>		
+<!-- <script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+	data-semver="2.1.1" data-require="jquery@*"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.7/angular.js"
+	data-semver="1.3.7" data-require="angular.js@*"></script>
+<script type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"
+	data-semver="2.0.11" data-require="ng-grid@*"></script>
+<script src="js/controllers.js"></script> -->
+</head>
+<body  ng-app="myApp" ng-controller="MyCtrl">
+	<h1>{{title}}</h1>
+	<div class="gridStyle" ng-grid="gridOptions"></div>
+	
+	<script> 
+		var app = angular.module('myApp', ['ngGrid']);
+		app.controller('MyCtrl', function($scope) {
+		  $scope.myData = [{name: "Moroni", age: 50, read: false, write: false, both: true},
+		  {name: "Tiancum", age: 43, read: false, write: false, both: true},
+		  {name: "Jacob", age: 273, read: true, write: false, both: true},
+		  {name: "Nephi", age: 293, read: true, write: false, both: true},
+		  {name: "Enos", age: 343, read: false, write: false, both: true}];
+		  /* $scope.gridOptions = { data: 'myData' }; */
+
+/* 		  					var cellEditTemplate = '<input type="checkbox" ng-checked="row.entity.value==\'on\'" ng-input="COL_FIELD" /></div>'; */
+					
+					var checkBoxCellReadTemplate = '<input type="checkbox"  ng-checked="row.entity.read" ng-click="readClick(row)"/></div>';
+					var checkBoxCellWriteTemplate = '<input type="checkbox"  ng-checked="row.entity.write" ng-click="writeClick(row)" /></div>';
+					var checkBoxCellBothTemplate = '<input type="checkbox"  ng-checked="row.entity.both" ng-click="bothClick(row)" /></div>';
+		  
+			$scope.gridOptions = {
+					data : 'myData',
+					rowHeight : 25,
+					multiSelect : false,
+					enableRowSelection : false,
+		            enableColumnResize: true,
+		            enableCellSelection: true,
+		            enableCellEditOnFocus: true,
+					columnDefs : [ {
+						field : "name",
+						displayName : "Name",
+						width : '25%',
+						height : '50px',
+					}, {
+						field : "age",
+						displayName : "Age",
+						width : '25%',
+						height : '50px',
+
+					}, {
+						field : "read",
+						displayName : "Read",
+						enableCellEdit : true,
+						cellTemplate : checkBoxCellReadTemplate,
+//						editableCellTemplate : cellEditTemplate
+					}, {
+						field : "write",
+						displayName : "Write",
+						
+						enableCellEdit : true,
+						cellTemplate : checkBoxCellWriteTemplate,
+//						editableCellTemplate : cellEditTemplate
+					}, {
+						field : "both",
+						displayName : "Both",
+						enableCellEdit : true,
+						cellTemplate : checkBoxCellBothTemplate,
+//						editableCellTemplate : cellEditTemplate
+					}
+
+					]
+				};
+			
+	    	$scope.readClick = function(row) {
+		    	/* 	$scope.myData[row.rowIndex].entity.write = !row.entity.read; */
+		    	console.log("Read : " + row.entity.read);
+		    	$scope.myData[row.rowIndex].read = !$scope.myData[row.rowIndex].read
+	
+		    	if ($scope.myData[row.rowIndex].read) {
+		    		$scope.myData[row.rowIndex].write = false;
+		    		$scope.myData[row.rowIndex].both = false;
+		    	}
+	    	
+	    		console.log(JSON.stringify($scope.myData[row.rowIndex], null, 4));
+	    	};
+	    	
+	    	$scope.writeClick = function(row) {
+		    	/* 	$scope.myData[row.rowIndex].entity.write = !row.entity.read; */
+		    	console.log("write : " + row.entity.write);
+		    	$scope.myData[row.rowIndex].write = !$scope.myData[row.rowIndex].write
+	
+		    	if ($scope.myData[row.rowIndex].write) {
+		    		$scope.myData[row.rowIndex].read = false;
+		    		$scope.myData[row.rowIndex].both = false;
+		    	}
+	    	
+	    		console.log(JSON.stringify($scope.myData[row.rowIndex], null, 4));
+	    	};
+		  
+	    	$scope.bothClick = function(row) {
+		    	/* 	$scope.myData[row.rowIndex].entity.write = !row.entity.read; */
+		    	console.log("write : " + row.entity.both);
+		    	$scope.myData[row.rowIndex].both = !$scope.myData[row.rowIndex].both
+	
+		    	if ($scope.myData[row.rowIndex].both) {
+		    		$scope.myData[row.rowIndex].read = false;
+		    		$scope.myData[row.rowIndex].write = false;
+		    	}
+	    	
+	    		console.log(JSON.stringify($scope.myData[row.rowIndex], null, 4));
+	    	};
+		  $scope.title = "ng-grid example7";
+		});
+	</script>
+</body>
+</html>

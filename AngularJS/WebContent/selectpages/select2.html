@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Cascading Dropdowns in AngularJs :devzone.co.in</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+
+</head>
+<body>
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+
+
+
+            <div>
+                Country: 
+                <select id="country" ng-model="country_id" ng-change="getCities()" ng-options="option._id as option._name for option in countries.options">
+                    <option value=''>Select</option>
+                </select>
+            </div>
+            <div>
+                City: <select id="city" ng-model="city_id" ng-options="option._id as option._name for option in cities.options"><option value=''>Select</option></select>
+            </div>
+
+
+
+	</div>
+
+<script>
+	var app = angular.module('myApp', []);
+	
+	app.controller('myCtrl', function($scope, $http) {
+		alert("hi");
+		$scope.getCountries = function(){
+			var config = { 
+					method : 'POST'
+					url : 'welcome.htm'
+					data : {
+						'param' : 'country'
+					}
+			};
+			var request = $http(config);
+			request.then(function (response) {
+				$scope.countries= {
+						options = response.data
+				};
+			}, function (error) {
+				alert(error.data)
+			});
+			
+		}
+		
+//
+		$scope.getCities = function(){
+			var config = { 
+					method : 'POST'
+					url : 'welcome.htm'
+					data : {
+						'param' : 'city',
+						'country_id' : $scope.country_id
+					}
+			};
+			var request = $http(config);
+			request.then(function (response) {
+				$scope.cities= {
+						options = response.data
+				};
+			}, function (error) {
+				alert(error.data)
+			});
+			
+		}
+		
+		angular.element(document).ready(function(){
+			alert("hi");
+			$scope.getCountries();
+		});
+		
+		
+		
+
+	});
+</script>
+</body>
+</html>

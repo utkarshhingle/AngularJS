@@ -1,0 +1,69 @@
+
+.DataList
+{
+Border-Color:#1A7ED6;
+Border-Width:2px;
+width:500px;
+font-family:Arial;
+/* background-color :#dadada; */
+}
+.DList
+{
+
+Border-Width:2px;
+width:100%;
+font-family:Arial;
+/* background-color :#dadada; */
+}
+.ItemStyle
+{
+    Width:33%;
+    Color:black;
+    background-color: #B4CFEC;
+    Height:20px;
+    font-size:13px;
+    
+}    
+
+.AltItemStyle
+{
+    background-color:#ffffff;
+    font-size:13px;
+   
+}
+
+.DataList_Header
+{
+    background-color:#6794CB;
+    Color:white;
+    Height:20px;
+    font-size:12px;
+    font-weight:bold;
+    
+}
+
+.FullAccessTxt
+{
+color:#1A7ED6;
+}
+
+.Strip_Color
+{
+ background-image :url('../../image/POPheader_bg.gif');
+}
+
+.Strip_Color a
+{
+font-family:Arial;
+font-weight:bold;
+font-size:11px;
+color:#000000;
+text-decoration:none;
+}
+.Notes
+{
+	font-family:Arial;
+	color:#a00707;
+	font-weight:bold;
+	font-size: 11px;
+}

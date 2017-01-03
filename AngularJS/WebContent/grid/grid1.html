@@ -1,0 +1,57 @@
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+        <title>Getting Started With ngGrid Example</title>
+      <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>       
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="MyCtrl">
+        <div class="gridStyle" ng-grid="gridOptions1"  id="grid1"></div>
+        
+<script>
+    var app = angular.module('myApp', ['ngGrid']);
+app.controller('MyCtrl', function($scope) {
+    $scope.myData1 = [{name: "Moroni", age: 50, address:"bangalore", pin_code:44555},
+                     {name: "Tiancum", age: 43, address:"mysore", pin_code:74034},
+                     {name: "Jacob", age: 27, address:"bellary", pin_code:88394},
+                     {name: "Nephi", age: 29, address:"ramanagara", pin_code:73883},
+                     {name: "Enos", age: 34, address:"cpt", pin_code:34456}];
+    $scope.gridOptions1 = { data: 'myData1',
+              rowHeight: 25,
+              multiSelect:false,
+              enableRowSelection: true,
+              columnDefs: [
+               {
+                 field: "name",
+                 displayName: "Name",
+                 width: '25%',
+                 height: '50px',                
+               },
+               {
+                 field: "age",
+                 displayName: "Age",
+                 width: '25%',
+                 height: '50px',
+
+               },
+               {
+                 field: "address",
+                 displayName: "Address",
+                 width: '25%',
+                 height: '50px'
+               },
+               {
+                 field: "pin_code",
+                 displayName: "PIN",
+                 width: '25%',
+                 height: '50px',
+               }
+
+               ]};
+});
+</script>
+        
+    </body>
+</html>

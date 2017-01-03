@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+	<div ng-app="myApp" ng-controller="customersCtrl">
+
+
+
+		<div>
+			Country: <select id="country" ng-model="country_id"
+				ng-change="getCities()" ng-options="x.Name for x in myData">
+				<option value=''>Select</option>
+			</select>
+
+			<div>
+				City: <select id="city" ng-model="city_id"
+					ng-options="x.Country for x in myData1"><option value=''>Select</option></select>
+			</div>
+		</div>
+
+
+		<span id="selectall" ng-click="selectAllFriends()"><u>Select
+				All</u></span> <br>
+
+		<ul class="example-animate-container">
+			<li class="animate-repeat" ng-repeat="friend in friends"><input
+				type="checkbox" value="{{friend.id}}" ng-checked="friend.checked"
+				ng-model="friend.checked"> {{friend.id}} {{friend.name}} who
+				is {{friend.age}} years old.</li>
+		</ul>
+
+
+
+		<select ng-model="myDropDown">
+			<option value="one">One</option>
+			<option value="two">Two</option>
+			<option value="three">Three</option>
+		</select> <input ng-show="myDropDown='one'" type="text">
+
+
+	</div>
+
+
+
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope, $http, $filter) {
+
+			// fruits
+			$scope.friends = [ {
+				id : 1,
+				name : 'John',
+				age : 25,
+				gender : 'boy'
+			}, {
+				id : 2,
+				name : 'Jessie',
+				age : 30,
+				gender : 'girl'
+			}, {
+				id : 3,
+				name : 'Johanna',
+				age : 28,
+				gender : 'girl'
+			}, {
+				id : 4,
+				name : 'Joy',
+				age : 15,
+				gender : 'girl'
+			}, {
+				id : 5,
+				name : 'Mary',
+				age : 28,
+				gender : 'girl'
+			}, {
+				id : 6,
+				name : 'Peter',
+				age : 95,
+				gender : 'boy'
+			}, {
+				id : 7,
+				name : 'Sebastian',
+				age : 50,
+				gender : 'boy'
+			}, {
+				id : 8,
+				name : 'Erika',
+				age : 27,
+				gender : 'girl'
+			}, {
+				id : 9,
+				name : 'Patrick',
+				age : 40,
+				gender : 'boy'
+			}, {
+				id : 10,
+				name : 'Samantha',
+				age : 60,
+				gender : 'girl'
+			} ];
+
+			$scope.allSelected = false;
+			$scope.selectAllFriends = function() {
+				if ($scope.allSelected) {
+					$scope.allSelected = false;
+					angular.forEach($scope.friends, function(friend) {
+						friend.checked = false;
+					});
+				} else {
+					$scope.allSelected = true;
+					angular.forEach($scope.friends, function(friend) {
+						friend.checked = true;
+					});
+				}
+			};
+
+			$scope.selectedFriends = function() {
+				return $filter('filter')($scope.friends, {
+					checked : true
+				});
+			};
+
+			$scope.getCountries = function() {
+				$http.get("http://www.w3schools.com/angular/customers.php")
+						.then(function(response) {
+							$scope.myData = response.data.records;
+
+						});
+
+			}
+
+			$scope.getCities = function() {
+				$http.get("http://www.w3schools.com/angular/customers.php")
+						.then(function(response) {
+							$scope.myData1 = response.data.records;
+
+						});
+
+			}
+
+			angular.element(document).ready(function() {
+				$scope.getCountries();
+			});
+
+		});
+	</script>
+
+</body>
+</html>

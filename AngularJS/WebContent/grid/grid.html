@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<title>Cascading Dropdowns in AngularJs :devzone.co.in</title>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script>
+	var app = angular.module('myApp', [ 'ngGrid' ]);
+	app
+			.controller(
+					'MyCtrl',
+					function($scope) {
+						$scope.myData = [ {
+							name : "Moroni",
+							age : 50,
+							dude : true
+						}, {
+							name : "Tiancum",
+							age : 43,
+							dude : true
+						}, {
+							name : "Jacob",
+							age : 27,
+							dude : false
+						}, {
+							name : "Nephi",
+							age : 29,
+							dude : true
+						}, {
+							name : "Enos",
+							age : 34,
+							dude : false
+						} ];
+						$scope.gridOptions = {
+							data : 'myData',
+							columnDefs : [
+									{
+										field : 'name',
+										displayName : 'Name'
+									},
+									{
+										field : 'age',
+										displayName : 'Age'
+									},
+									{
+										field : 'dude',
+										displayName : 'Dude',
+										cellTemplate : '<input type="checkbox" ng-model="row.entity.dude" ng-click="toggle(row.entity.name,row.entity.dude)">'
+									} ]
+						};
+
+						$scope.toggle = function(name, value) {
+							//do something usefull here, you have the name and the new value of dude. Write it to a db or else. 
+							alert(name + ':' + value);
+						}
+					});
+</script>
+</head>
+<body>
+
+	<div ng-controller="CountryCntrl">
+		<div>
+			Country: <select id="country" ng-model="states"
+				ng-options="country for (country, states) in countries">
+				<option value=''>Select</option>
+			</select>
+		</div>
+		<div>
+			States: <select id="state" ng-disabled="!states" ng-model="cities"
+				ng-options="state for (state,city) in states"><option
+					value=''>Select</option></select>
+		</div>
+		<div>
+			City: <select id="city" ng-disabled="!cities || !states"
+				ng-model="city"><option value=''>Select</option>
+				<option ng-repeat="city in cities" value='{{city}}'>{{city}}</option></select>
+		</div>
+
+
+
+		<input type="button" value="Show Hide DIV" ng-click="ShowHide()" /> <br />
+		<br />
+		<div ng-show="IsVisible">My DIV</div>
+	</div>
+
+	</div>
+
+</body>
+</html>

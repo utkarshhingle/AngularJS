@@ -1,0 +1,241 @@
+body 
+{
+    
+}
+body, div, p, h1, h2, h3, h4, ul, li, table
+{
+	margin:0;
+	padding:0;
+}
+.Manditory
+{
+    font-size: 10px;
+    font-weight: bold;
+    color: #FF0000;
+    font-family: Arial;
+}
+.igtbl_Office2007BlueHeader
+{
+	background-color:#E2EFFF;
+	background-position:bottom ;
+	background-image: url(Images/bg_nav.gif);
+	padding-top:3px;
+	padding-bottom:3px;
+	height:20px;
+}
+.igtbl_Office2007BlueFooter
+{
+	background-color:#D8DFEA;
+	background-image:url(Images/ItemBackground.gif);
+	border-width:0px;
+}
+.igtbl_Office2007BluePagerArea
+{
+	/*background-color:#C9D9ED;*/
+	/*background-image:url(Images/ItemBackground.gif);*/
+	border-width:0px;
+	
+	height:20px;
+}
+.igtbl_Office2007BlueItem
+{
+	border:solid 1px black;
+}
+.txtcolor
+{
+ background-color:#BADED6 ;	
+}
+.red
+{
+ background-color:#F5072F ;	
+}
+.blue
+{
+ background-color:#07A5FA ;	
+}
+.green
+{
+ background-color:#07FA44 ;	
+}
+.Button
+{
+	font-family:Verdana; 
+	font-size:10px; 
+	font-weight:bold;
+	height:24px; 
+	width:80px;
+	color:#006644;
+	border-color:#FFFFFF;
+	border-width:1px;
+	background-color:#d7d7d7;
+}
+.TextBox1
+{
+	color:#000000;
+	font-family:Tahoma; 
+	font-size:11px; 
+	border-width:1px; 
+	border-color:SlateGray;
+	text-align :left;
+	z-index: 50;
+	cursor:text;
+	 height:16px;
+	/*background-color:#fbfdff;*/
+}
+.AlterNativeRow
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #E4F2FB;
+    TEXT-ALIGN: left
+}
+
+.FormBackColor
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #FFFFFF;
+    TEXT-ALIGN: left
+}
+
+.GridBorder
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #E3EFFF ;
+    TEXT-ALIGN: left
+}
+
+.GridFooterBackcolor
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #E3EFFF ;
+    TEXT-ALIGN: left
+}
+
+.GridPagerStyleBackcolor
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #E3EFFF ;
+    TEXT-ALIGN: left
+}
+
+.GridPagerStyleForecolor
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #E3EFFF ;
+    TEXT-ALIGN: center
+}
+.GridHeaderBackcolor
+{
+    FONT-SIZE: 8pt;
+    COLOR: black;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+     
+    BACKGROUND-COLOR: #E2EFFF ;
+    TEXT-ALIGN: left
+    
+}
+.SelectedRowBackColor
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 8pt;
+    COLOR:Black ;
+    TEXT-INDENT: 2px;
+    FONT-FAMILY: Tahoma, Arial, Verdana;
+  
+    BACKGROUND-COLOR: #6794CB; 
+}
+.goAnchor {
+	display: inline;
+	color: #fff;
+	background-color: #4682b4;
+	font-size:11px;
+	font-family:Verdana;
+	font-weight: bold;
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #333;
+	border-right: 1px solid #333;
+	padding-left: 4px;
+	padding-right: 4px;
+	cursor: default;
+	width:80px;
+}
+.labelText
+{
+	FONT-SIZE: 8pt;
+    COLOR: #007b32;
+}
+/*table tr.alt td.icon
+		{ background-color: #eee; }*/
+.modalBackground 
+{
+      background-color:#d7d7c4; 
+      filter:alpha(opacity=70);
+      opacity:0.7; 
+} 
+.ProgressDiv
+{
+	visibility:hidden;
+	font-weight: normal; 
+	font-size: 10pt;
+    z-index: 200; 
+    left: 90%; 
+    width: 90px; 
+    color: white; 
+    font-family: Arial; 
+    position: absolute;
+    top: 120px; 
+    height: 20px; 
+    background-color: #AB0058;
+    
+}
+
+.MyCalendar .ajax__calendar_container
+ {
+    border:1px solid #646464;
+    background-color:#e2f4fb;
+    color:black;
+}
+.MyCalendar .ajax__calendar_other .ajax__calendar_day,
+.MyCalendar .ajax__calendar_other .ajax__calendar_year
+ {
+    color: red;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_month,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_year
+ {
+    color: white;
+    background-color:black;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day,
+.MyCalendar .ajax__calendar_active .ajax__calendar_month,
+.MyCalendar .ajax__calendar_active .ajax__calendar_year
+ {
+    color: green;
+    font-weight:bold;
+ }
