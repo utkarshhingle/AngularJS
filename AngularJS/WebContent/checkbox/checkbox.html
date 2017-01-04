@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div class="panel" ng-controller="checkBoxController"> 
+ <div ng-repeat="employee in employees">
+  <div class="action-checkbox">
+   <input id="{{employee.name}}" type="checkbox" value="{{employee.name}}" ng-checked="selection.indexOf(employee.name) > -1" ng-click="toggleSelection(employee.name)" />
+   <label for="{{employee.name}}"></label>
+   {{employee.name}}
+  </div>
+ </div>
+ <span style="color:white;" class="selected-item">Selected Items:<span>
+ <div ng-repeat="name in selection" class="selected-item">
+  {{name}}
+ </div>
+</div>
+</body>
+</html><span id="ezoic-pub-ad-placeholder-118" class="ezoic-adpicker-ad" data-ezadpicker="118" data-ez-position-type="native_mid"></span>
